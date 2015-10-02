@@ -1,2 +1,17 @@
-// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
+.navbar {
+	border-radius: 0 !important;
+}
+.junkerBody{
+
+}
+.raptorBack{
+	background-image: url('../img/RaptorSketch.gif');
+}
+.pageFooter{
+	margin-top: 5em;
+}
+.panelRelated{
+	margin-top: 1em;
+}

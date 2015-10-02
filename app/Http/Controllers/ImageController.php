@@ -49,7 +49,7 @@ class ImageController extends Controller
     public function show($id)
     {
         $image = Image::where('prevId', $id)->first();
-        return $image->path;
+        return view('images.show', ['image' => $image, 'bodyClass' => 'raptorBack']);
     }
 
     /**
