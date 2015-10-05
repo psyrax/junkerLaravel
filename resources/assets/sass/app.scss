@@ -15,3 +15,27 @@
 .panelRelated{
 	margin-top: 1em;
 }
+.bodyOverlay{
+	background-color:rgba(255,255,255,0.6);
+	height: auto;
+}
+.descP{
+	margin-top: 0;
+}
+.descLead{
+	margin-bottom: 0;
+}
+a{
+	color: black;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.navLinkOverride{
+	text-decoration: none;
+}
+a:hover{
+	color: grey;
+}
+.frontList{
+	margin-top: 2em;
+}

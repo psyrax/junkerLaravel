@@ -7,11 +7,11 @@
          <title>JunkerHQ - @yield('title')</title>
     </head>
     <body class="junkerBody @yield('bodyClass')">
+        <div class="bodyOverlay">
         @include('layouts.nav')
-        <div class="container">
-            @yield('content')
-        </div>
+        @yield('content')
         @include('layouts.footer')
+        </div>
         <script src="<?php echo asset('/js/vendor.js');?>"></script>
         <script src="<?php echo asset('js/app.js');?>"></script>
     </body>

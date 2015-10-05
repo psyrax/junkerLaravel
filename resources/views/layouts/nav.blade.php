@@ -14,11 +14,11 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="navbar-1">
       <ul class="nav navbar-nav navbar-right">
-        <li class="text-center"><a href="#">Kojima Game Gallery 小島さんのゲーム ギャラリー</a></li>
-        <li class="text-center"><a href="#">Snatcher Page スナッチャー</a></li>
-        <li class="text-center"><a href="#">Policenauts Page ポリスノーツ　</a></li>
-        <li class="text-center"><a href="#">Kojima Game Forums</a></li>
-        <li class="text-center"><a href="#">Contact Me</a></li>
+        <li class="text-center"><a href="#" class="navLinkOverride">Kojima Game Gallery 小島さんのゲーム ギャラリー</a></li>
+        <li class="text-center"><a href="#" class="navLinkOverride">Snatcher Page スナッチャー</a></li>
+        <li class="text-center"><a href="#" class="navLinkOverride">Policenauts Page ポリスノーツ　</a></li>
+        <li class="text-center"><a href="#" class="navLinkOverride">Kojima Game Forums</a></li>
+        <li class="text-center"><a href="#" class="navLinkOverride">Contact Me</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
