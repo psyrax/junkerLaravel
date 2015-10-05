@@ -57,5 +57,41 @@
                  <p class="descP">Sketches taken from different printed sources</p>
             </div>
         </div>
+        <div class="row frontList">
+            <div class="col-xs-12 col-md-4 text-right">
+                <h2>General</h2>
+            </div>
+            <div class="col-xs-12 col-md-8">
+                <p class="lead descLead"><a href="">Script dumps</a></p>
+                <p class="descP">Full text from Snatcher, Policenauts, Metal Gear Solid, Metal Gear Solid 2 and Lunar</p>
+                
+                <p class="lead descLead"><a href="">Wallpapers</a></p>
+                <p class="descP">Snatcher, Policenauts, MGS, Lunar...</p>
+                
+                <p class="lead descLead"><a href="">Script Extraction Tool Download</a></p>
+                <p class="descP">with source code (DOS/Linux)</p>
+                
+                <p class="lead descLead"><a href="">Interesting Links</a></p>
+                <p class="descP">A Gallery of pages with abundant information and media on Snatcher, Policenauts and Metal Gear Solid</p>
+            </div>
+        </div>
+        <div class="ro frontList">
+            <div class="col-xs-12 col-md-4 text-right">
+                <h2>Misc</h2>
+            </div>
+            <div class="col-xs-12 col-md-8">
+                <p class="lead descLead"><a href="">Lunar Gallery</a></p>
+                 <p class="descP">Scans and info on games from the Lunar series</p>
+
+                <p class="lead descLead"><a href="">Sega Saturn Development</a></p>
+                 <p class="descP">Source code on some Sega Saturn programs I made in the past.</p>
+
+                <p class="lead descLead"><a href="">Favorite Video Game List</a></p>
+                
+                <p class="lead descLead"><a href="">About Me</a></p>
+                
+                <p class="lead descLead"><a href="">Personal Column and Random Thoughts</a></p>
+            </div>
+        </div>
     </div>
 @endsection

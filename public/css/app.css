@@ -5998,7 +5998,16 @@ button.close {
   background-image: url("../img/RaptorSketch.gif"); }
 
 .pageFooter {
-  margin-top: 5em; }
+  margin-top: 5em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  background-color: #222222;
+  color: white; }
+  .pageFooter a {
+    color: white;
+    text-decoration: none; }
+  .pageFooter li {
+    list-style-type: square; }
 
 .panelRelated {
   margin-top: 1em; }

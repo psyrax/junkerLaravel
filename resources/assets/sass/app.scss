@@ -11,6 +11,17 @@
 }
 .pageFooter{
 	margin-top: 5em;
+	padding-top: 2em;
+	padding-bottom: 2em;
+	background-color: #222222;
+	color: white;
+	a{
+		color: white;
+		text-decoration: none;
+	}
+	li{
+		list-style-type: square;
+	}
 }
 .panelRelated{
 	margin-top: 1em;
