@@ -8,9 +8,8 @@
     <div class="container">
     	<div class="row">
     		<div class="col-xs-12 col-md-8">
-    			<?php /*<img src="{{ $image->path }}" />*/ ?>
     			<h1>Metal Gear Pilot Disk <small>Alternate Version</small></h1>
-    			<img class="img-responsive" src="{{asset('img/placeholders/mgs_pilot_disk.jpg')}}" />
+    			<img class="img-responsive" src="{{ $image->path }}" />
     		</div>
     		<div class="col-xs-12 col-md-4">
     			<div class="panel panel-primary panelRelated">
