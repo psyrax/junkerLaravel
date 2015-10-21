@@ -5,10 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use Auth;
+use App\Item;
 use App\Collection;
+use Auth;
 
-class CollectionController extends Controller
+class ItemController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -28,7 +29,8 @@ class CollectionController extends Controller
     public function create()
     {
         if (Auth::check()) {
-            return view('admin.collections.create');
+            $collections = Collection::all();
+            return view('admin.items.create', ['collections' => $collections]);
         };
     }
 
@@ -40,7 +42,7 @@ class CollectionController extends Controller
      */
     public function store(Request $request)
     {
-       return $this->collectionStore($request);
+        return $this->itemStoreUpdate($request);
     }
 
     /**
@@ -62,10 +64,7 @@ class CollectionController extends Controller
      */
     public function edit($id)
     {
-        if (Auth::check()) {
-            $collection = Collection::find($id);
-            return view('admin.collections.edit', ['collection' => $collection]);
-        };
+        //
     }
 
     /**
@@ -77,8 +76,9 @@ class CollectionController extends Controller
      */
     public function update(Request $request, $id)
     {
-        return $this->collectionStore($request, $id);
+        //
     }
+
     /**
      * Remove the specified resource from storage.
      *
@@ -87,27 +87,42 @@ class CollectionController extends Controller
      */
     public function destroy($id)
     {
-
+        //
     }
-    protected function collectionStore( Request $request, $id = null ){
+    protected function itemStoreUpdate( Request $request, $id = null ){
         if ( Auth::check() ) {
             if ( $id ){
-                $collection = Collection::find($id);
+                $item = Item::find($id);
             } else {
-                $collection = new Collection;
+                $item = new Item;
             };
-
-            $collection->name = $request->input('collection_name');
-            $collection->slug = str_slug($request->input('collection_name'), "-");
+            /*['name', 'region', 'platform', 'category', 'type', 'catalog_number', 'isbn', 'sku', 'role', 'directed', 'kojima_team', 'release_date', 'year'];*/
+            $item->collection_id = $request->input('collection_id');
+            $item->name = $request->input('name');
+            $item->region = $request->input('region');
+            $item->platform = $request->input('platform');
+            $item->category = $request->input('category');
+            $item->type = $request->input('type');
+            $item->catalog_number = $request->input('catalog_number');
+            $item->isbn = $request->input('isbn');
+            $item->sku = $request->input('sku');
+            $item->role = $request->input('role');
+            $item->directed = $request->input('directed');
+            $item->kojima_team = $request->input('kojima_team');
+            $item->release_date = date("Y-m-d H:i:s", strtotime( $request->input('release_date') ));
+            $item->year = $request->input('year');
+            $item->slug = str_slug($request->input('name'), "-");
+            
             
             try {
-                $collection->save();
-                return redirect('/home/collections');  
+                $item->save();
+                return redirect('/home/items'); 
             }
             catch (\Illuminate\Database\QueryException $e) {
-               return echo $e->getMessage();
+                var_dump( $e->getMessage() );
+                die();
             }
-            
+           
 
 
           } else {

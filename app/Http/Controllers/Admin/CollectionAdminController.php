@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
@@ -17,7 +17,7 @@ class CollectionAdminController extends Controller
     public function index()
     {
     	$collections = Collection::all();
-        return view('home.index', ['collections' => $collections]);
+        return view('admin.collections.index', ['collections' => $collections]);
     }
 
 }

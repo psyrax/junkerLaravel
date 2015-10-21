@@ -14,8 +14,8 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="navbar-1">
       <ul class="nav navbar-nav navbar-left">
-        <li class="text-center"><a href="#" class="navLinkOverride">Collections</a></li>
-        <li class="text-center"><a href="#" class="navLinkOverride">Items</a></li>
+        <li class="text-center"><a href="{{ url('/home/collections') }}" class="navLinkOverride">Collections</a></li>
+        <li class="text-center"><a href="{{ url('/home/items') }}" class="navLinkOverride">Items</a></li>
         <li class="text-center"><a href="#" class="navLinkOverride">Images</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->

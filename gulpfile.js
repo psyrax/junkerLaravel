@@ -16,4 +16,5 @@ elixir(function(mix) {
     .sass('app.scss')
     .scripts(['jquery.js','bootstrap.js'], 'public/js/vendor.js')
     .scripts(['app.js'], 'public/js/app.js')
+    .scripts(['admin.js'], 'public/js/admin.js')
 });

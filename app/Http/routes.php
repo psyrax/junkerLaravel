@@ -15,7 +15,8 @@ Route::get('/', function () {
     return view('welcome', ['bodyClass' => 'raptorBack']);
 });
 
-Route::resource('images', 'ImageController');
+Route::resource('image', 'ImageController');
+Route::resource('item', 'ItemController');
 Route::resource('collection', 'CollectionController');
 
 // Authentication routes...
@@ -33,6 +34,8 @@ Route::post('password/reset', 'Auth\PasswordController@postReset');
 
 Route::group(['middleware' => 'auth', 'prefix' => 'home'], function () {
     Route::get('/', 'Admin\CollectionAdminController@index');
-
     Route::get('/collections', 'Admin\CollectionAdminController@index');
+    Route::get('/items', 'Admin\ItemAdminController@index');
+    Route::get('/item/{id}/manage', 'Admin\ItemAdminController@manage');
+    Route::get('/item/images', 'Admin\ItemAdminController@allImages');
 });

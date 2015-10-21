@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Image;
+use Auth;
 
 class ImageController extends Controller
 {
@@ -72,7 +73,14 @@ class ImageController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+       if ( Auth::check() ) {
+            $image = Image::find($id);
+            $image->title = $request->input('title');
+            $image->description = $request->input('description');
+            $image->item_id = $request->input('itemid');
+            $image->save();
+            return $image;
+       }
     }
 
     /**

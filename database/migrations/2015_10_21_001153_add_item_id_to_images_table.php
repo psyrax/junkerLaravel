@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCollectionsTable extends Migration
+class AddItemIdToImagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,11 +12,8 @@ class CreateCollectionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('collections', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name')->unique();
-            $table->string('slug')->unique();
-            $table->timestamps();
+        Schema::table('images', function (Blueprint $table) {
+            $table->integer('item_id');
         });
     }
 
@@ -27,6 +24,8 @@ class CreateCollectionsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('collections');
+        Schema::table('images', function (Blueprint $table) {
+            //
+        });
     }
 }
