@@ -105,7 +105,7 @@ class CollectionController extends Controller
                 return redirect('/home/collections');  
             }
             catch (\Illuminate\Database\QueryException $e) {
-               return echo $e->getMessage();
+               return $e->getMessage();
             }
             
 
