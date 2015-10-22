@@ -8,9 +8,17 @@
 <div class="row" ng-app="junkerImage">
 	<div class="col-xs-12">
 		<h1>Manage item</h1>
-        @foreach ( $item->images as $image )
-        <img src="{{ $image->path }}" style="width:300px;"/>
-        @endforeach
+        <div class="row">
+            @foreach ( $item->images as $image )
+            <div class="col-md-4">
+                <h3>{{ $image->title }}</h3>
+                <p>{{ $image->description }}</p>
+                <img class="img-responsive" src="{{ $image->path }}" style="width:300px;"/>
+            </div>
+            @endforeach
+        </div>
+        <hr />
+        <h1>Add images</h1>
         <div ng-controller="imageSearchController">
             <div class="row">
                 <div class="col-md-4">
